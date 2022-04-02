@@ -118,7 +118,7 @@ const longestBeautifulSubstring = (word = '') => {
   let len = 1;
   let maxLength = 0;
 
-  for (let i = 1; i !== word.length; i++) {
+  for (let i = 1; i < word.length; i++) {
     if (word[i - 1] === word[i]) len++;
     else if (word[i - 1] < word[i]) len++, count++;
     else (count = 1), (len = 1);
@@ -130,4 +130,4 @@ const longestBeautifulSubstring = (word = '') => {
 };
 
 // 5
-console.log(longestBeautifulSubstring('aeeeiiiioooauuuaeiou'));
+console.log(longestBeautifulSubstring('aezeeiiiioooauuuaeiou'));
